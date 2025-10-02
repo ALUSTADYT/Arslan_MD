@@ -1,6 +1,6 @@
 🤖 ***Arslan-MD*** - MULTIPLE POWERFUL WHATSAPP BOT
 
-> ⚔️ Developed by ArslanMD Official | 100+ Features | Super Aggressive Bot
+> ⚔️ Developed by ArslanMD Official | 500+ Features | Super Aggressive Bot
 </div>
 
 <p align="center">
@@ -16,11 +16,11 @@
 
   <!-- GitHub Stats Badges with new color palette -->
   <p>
-    <img src="https://img.shields.io/github/forks/Arslan-MD/Arslan-Ai?style=flat&color=1E88E5&logo=github&logoColor=white&label=Forks" alt="GitHub Forks" />
+    <img src="https://img.shields.io/github/forks/Arslan-MD/Arslan_MD?style=flat&color=1E88E5&logo=github&logoColor=white&label=Forks" alt="GitHub Forks" />
     <img src="https://img.shields.io/github/followers/Arslan-MD?style=flat&color=43A047&logo=github&logoColor=white&label=Followers" alt="GitHub Followers" />
-    <img src="https://img.shields.io/github/last-commit/Arslan-MD/Arslan-Ai?style=flat&color=8E24AA&logo=git&logoColor=white&label=Last%20Commit" alt="Last Commit" />
-    <img src="https://img.shields.io/github/repo-size/Arslan-MD/Arslan-Ai?style=flat&color=0097A7&logo=database&logoColor=white&label=Repo%20Size" alt="Repo Size" />
-    <img src="https://img.shields.io/github/package-json/v/Arslan-MD/Arslan-Ai?style=flat&color=F57C00&logo=npm&logoColor=white&label=Version" alt="Package Version" />
+    <img src="https://img.shields.io/github/last-commit/Arslan-MD/Arslan_MD?style=flat&color=8E24AA&logo=git&logoColor=white&label=Last%20Commit" alt="Last Commit" />
+    <img src="https://img.shields.io/github/repo-size/Arslan-MD/Arslan_MD?style=flat&color=0097A7&logo=database&logoColor=white&label=Repo%20Size" alt="Repo Size" />
+    <img src="https://img.shields.io/github/package-json/v/Arslan-MD/Arslan_MD?style=flat&color=F57C00&logo=npm&logoColor=white&label=Version" alt="Package Version" />
   </p>
 
   <!-- Hero GIF with updated border & hover effect -->
@@ -36,7 +36,7 @@
 
 To start, fork this repository to your own GitHub account by clicking the button below:
 
-<a href="https://github.com/Arslan-MD/Arslan_MD/fork"><img src="https://img.shields.io/github/forks/Arslan-MD/Arslan_MD?style=for-the-badge&logo=github&color=4c1&label=Fork%20Arslan-MD" alt="Fork Arslan-MD" /></a>
+<a href="https://github.com/Arslan-MD/Arslan_MD/fork"><img src="https://img.shields.io/github/forks/Arslan-MD/Arslan_MD?style=for-the-badge&logo=github&color=4c1&label=Fork%20Arslan_MD" alt="Fork Arslan_MD" /></a>
 
 ---
 
@@ -48,9 +48,17 @@ Authenticate using **one** of the methods below to generate your `Session ID`.
   <img src="https://i.imgur.com/LyHic3i.gif" alt="Authentication Flow Preview" />
 </p>
 
-> ♥️ Pairing Code Authentication
+> ♥️ Pairing Code Server-1
+
+**(NOTE: 👉Server 1 Only For Bot Creaters Do Not Use Server1👈)**
 
 [![Pairing Code](https://img.shields.io/badge/Pairing%20Code-000000?style=for-the-badge&logo=react&logoColor=red)](https://arslan-md-web.onrender.com/)
+
+> 🇵🇰 Pairing Code Server-2
+
+**ARSLAN-MD BOT USERS SESSION GENERATOR** 🧬 
+
+[![Pairing Code](https://img.shields.io/badge/Pairing%20Code-000000?style=for-the-badge&logo=react&logoColor=blue)](https://arslan-xmd-pair-site.onrender.com/)
 
 <p align="center">
   <img src="https://i.imgur.com/LyHic3i.gif" width="65%" />
@@ -141,7 +149,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [20.x]   # Specific Node.js version set to 20.x
 
     steps:
     - name: Checkout repository
@@ -151,12 +159,16 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+        check-latest: true   # Always grab the exact latest patch for this version
 
     - name: Install dependencies
       run: npm install
 
+    - name: Build project (optional)
+      run: npm run build || echo "No build script found, skipping..."
+
     - name: Start application
-      run: node server.js
+      run: npm start
 ```
 </details> 
 
